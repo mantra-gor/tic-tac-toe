@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    background: linear-gradient(to bottom right, #0070bbd1, #27AAE1);
+    width: 100vw;
+    height: 100vh;
+    /* padding: 4px; */
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.2rem;
+}
+.title {
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    font-size: 4rem;
+}
+.game-info {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+.tic-tac-toe {
+    width: 90%;
+    max-width: 30rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    backdrop-filter: blur(10px);
+}
+.box {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 1/1;
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.box1,
+.box2,
+.box4,
+.box5 {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3,
+.box6 {
+    border-bottom: 2px solid white;
+}
+
+.box7,
+.box8 {
+    border-right: 2px solid white;
+}
+.btn {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 160ms ease;
+    user-select: none;
+
+    /* position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%); */
+
+    display: none;
+}
+.btn:hover{
+    box-shadow: 0px 0px 20px rgba(13, 13, 13, 0.25);
+    background-color: #89cff097;
+}
+.btn:active{
+    scale: 1.04;
+}
+.win{
+    background-color: rgba(30, 225, 20, 0.4);
+}
+.btn.active{
+    display: initial;
+}
+
+.footer-section{
+    font-family: 'Space Mono', monospace;
+    position: fixed;
+    bottom: 0%;
+    width: 100vw;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 18px;
+    background-color: #1B1B1B;
+}
+.footer-txt{
+    font-size: 13px;
+    color: #F6F8FF;
+}
+.footer-links{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.footer-links p{
+    display: none;
+}
+.link-icons{
+    margin-left: 1rem;
+    font-size: 20px;
+}
+.fa-github{
+    color: white;
+}
+.fa-linkedin-in{
+    color: #0A66C2;
+}
+.fa-instagram{
+    color: #FD1D1D;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 726px) {
+    #wrapper{
+        gap: 1.2rem;
+    }
+    .title{
+        font-size: 5.2rem;
+    }
+    .game-info {
+        font-size: 19px;
+    }
+    .tic-tac-toe{
+        max-width: 25rem;
+    }
+    .links-section-icons{
+        height: 24px;
+    }
+    .link-container p{
+        font-size: 15px;
+    }
+    .footer-txt{
+        font-size: 16px;
+    }
+    .link-icons{
+        font-size: 22px;
+    }
+    .footer-links p{
+        display: initial;
+        font-size: 12px;
+        gap: 1rem;
+        color: #F6F8FF;
+    }
+    .footer-section{
+        padding: 2px 38px;
+    }
+}
