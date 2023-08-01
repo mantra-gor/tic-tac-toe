@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 2.2rem;
+    gap: 1rem;
 }
 .title {
     font-family: 'Kaushan Script', cursive;
@@ -76,6 +76,34 @@
 .box8 {
     border-right: 2px solid white;
 }
+.score-board{
+    position: absolute;
+    top: 78%;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    width: 18rem;
+    text-align: center;
+}
+.score-board-heading{
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0.3rem;
+}
+.score-board-head{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0.2rem 0;
+}
+.score-board-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0.2rem 0;
+}
 .btn {
     font-family: 'Quicksand', sans-serif;
     color: white;
@@ -89,12 +117,12 @@
     transition: all 160ms ease;
     user-select: none;
 
-    /* position: fixed;
-    top: 85%;
+    position: absolute;
+    top: 70%;
     left: 50%;
-    transform: translateX(-50%); */
+    transform: translateX(-50%);
 
-    display: none;
+    /* display: none; */
 }
 .btn:hover{
     box-shadow: 0px 0px 20px rgba(13, 13, 13, 0.25);
@@ -149,7 +177,15 @@
 }
 
 /* Media Queries */
-@media only screen and (min-width: 726px) {
+@media only screen and (min-width: 576px){
+    .tic-tac-toe{
+        max-width: 24.5rem;;
+    }
+}
+
+
+/* @media only screen and (min-width: 726px) { */
+@media only screen and (min-width: 992px) {
     #wrapper{
         gap: 1.2rem;
     }
@@ -162,17 +198,44 @@
     .tic-tac-toe{
         max-width: 25rem;
     }
-    .links-section-icons{
-        height: 24px;
+
+    .score-board{
+        position: absolute;
+        top: 40%;
+        left: 75vw;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 1rem;
+        width: 15rem;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.15);
     }
-    .link-container p{
-        font-size: 15px;
+    .score-board-heading{
+        border-bottom: 1px solid white;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0.3rem;
+    }
+    .score-board-head{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0.8rem 0;
+    }
+    .score-board-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0.2rem 0;
+    }
+    .btn{
+        top: 80%;
+    }
+    .footer-section{
+        padding: 2px 38px;
     }
     .footer-txt{
         font-size: 16px;
-    }
-    .link-icons{
-        font-size: 22px;
     }
     .footer-links p{
         display: initial;
@@ -180,7 +243,7 @@
         gap: 1rem;
         color: #F6F8FF;
     }
-    .footer-section{
-        padding: 2px 38px;
-    }
+    .link-icons{
+        font-size: 22px;
+    }   
 }

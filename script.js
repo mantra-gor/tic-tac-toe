@@ -1,6 +1,26 @@
+if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("sw.js").then(registration => {
+        console.log("SW Registered")
+        console.log(registration)
+    }).catch(error => {
+        console.log("SW Registration Failed!")
+        console.log(error)
+    })
+}
+
+
 const boxes = document.querySelectorAll('.box')
 const gameInfo = document.querySelector('.game-info')
 const newGameBtn = document.querySelector('.btn')
+
+const X = document.querySelector('.X-score')
+const O = document.querySelector('.O-score')
+const Draw = document.querySelector('.Draw-score')
+
+let scoreOf_X = 0;
+let scoreOf_O = 0;
+let scoreOf_Draw = 0;
+
 
 let currentPlayer
 let gameGrid
@@ -62,9 +82,13 @@ function checkGameOver(){
             // if winner is X
             if(gameGrid[position[0]] === "X"){
                 answer = "X"
+                scoreOf_X++
+                X.innerText = `${scoreOf_X}`
             }
             else{
                 answer = "O"
+                scoreOf_O++
+                O.innerText = `${scoreOf_O}`
             }
 
             // Disable Pointer Event
@@ -95,6 +119,8 @@ function checkGameOver(){
     if(fillCount == 9){
         gameInfo.innerText = "Game Tied!"
         newGameBtn.classList.add('active')
+        scoreOf_Draw++
+        Draw.innerText = `${scoreOf_Draw}`
     }
 }
 
