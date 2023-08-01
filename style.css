@@ -12,7 +12,6 @@
     background: linear-gradient(to bottom right, #0070bbd1, #27AAE1);
     width: 100vw;
     height: 100vh;
-    /* padding: 4px; */
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
@@ -116,13 +115,11 @@
     cursor: pointer;
     transition: all 160ms ease;
     user-select: none;
-
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
-
-    /* display: none; */
+    display: none;
 }
 .btn:hover{
     box-shadow: 0px 0px 20px rgba(13, 13, 13, 0.25);
@@ -183,8 +180,20 @@
     }
 }
 
+/* Issue in Iphone SE Responsiveness */
+/* @media only screen and (max-width:380px) {
+    .tic-tac-toe{
+        width: 18rem;
+    }
+    .box{
+        font-size: 43px;
+    }
+    .btn {
+        padding: 8px 22px;
+        font-size: 14px;
+    }
+} */
 
-/* @media only screen and (min-width: 726px) { */
 @media only screen and (min-width: 992px) {
     #wrapper{
         gap: 1.2rem;
